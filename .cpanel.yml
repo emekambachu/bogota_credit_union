@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sekehkjm/account.sekerfinance.com/
+    - /bin/cp -R * $DEPLOYPATH

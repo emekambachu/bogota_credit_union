@@ -1,0 +1,47 @@
+#KJEAllContent {
+    background: #ffffff;
+    color: #000000;
+}
+
+.KJEFontHeading {
+    color:#000000;
+}
+
+.KJEError {
+    color:#BB0000;
+}
+
+.KJETitle {
+}
+
+.KJECalculatorTable {
+}
+
+.KJEReportTitle {
+}
+
+.KJEReportTitleBlock {
+}
+
+.KJEWidthConstraint {
+    max-width: 900px;
+    text-align:left;
+    margin: auto;
+    background: #ffffff;
+    padding:15px;
+}
+
+.KJEWrapper {
+    background: #ffffff;
+    padding: 0;
+    margin:0;
+}
+
+body {
+ margin: 0;
+}
+
+
+/**CUSTOMCSS**/
+
+
