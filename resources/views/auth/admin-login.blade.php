@@ -31,7 +31,7 @@
         <!-- //END PAGE CONTENT CONTAINER -->
 
         <!-- PAGE LOGIN CONTAINER -->
-        <div class="important-container login-container" style="background-color:#a7d6fc;">
+        <div class="important-container login-container" style="background-color:#0C908C;">
             <div class="content">
                 @include('includes.alerts')
                 <a style="margin-bottom:80px;" href="{{ url('/') }}" class="logo-holder logo-holder--lg logo-holder--wide">
@@ -66,7 +66,7 @@
                         <div class="form-row">
                             <div class="col-2"></div>
                             <div class="col-8">
-                                <button type="submit" style='background-color: #003142; color: #fff;'
+                                <button type="submit" style='background-color: #D36729; color: #fff;'
                                         class="btn btn-block">Login</button>
                             </div>
                         </div>
