@@ -11,7 +11,6 @@
 |
 */
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -19,9 +18,9 @@ use Illuminate\Support\Str;
 
 // check
 Route::get('/', static function (){
-    if (Str::startsWith(Request::root(), 'https://account.'))
+    if (Str::startsWith((new Illuminate\Http\Request)->root(), 'https://account.'))
     {
-        $domain = substr (Request::root(), 16); // $domain is now 'www.example.com'
+        $domain = substr ((new Illuminate\Http\Request)->root(), 16); // $domain is now 'www.example.com'
         return Redirect::to($domain);
     }
 });
