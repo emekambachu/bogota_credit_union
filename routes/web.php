@@ -15,11 +15,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
-
 // check
 Route::get('/', static function (){
-    $domain = Request::root();
-    return Redirect::to($domain);
+    if (starts_with(Request::root(), 'https://account.'))
+    {
+        $domain = substr (Request::root(), 16); // $domain is now 'www.example.com'
+        return Redirect::to($domain);
+    }
 });
 
 Route::get('/registration-complete', static function (){
