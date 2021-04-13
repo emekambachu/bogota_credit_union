@@ -20,18 +20,19 @@ use Illuminate\Support\Str;
 // check
 Route::get('/', static function (){
 
-    function get_domain($url)
-    {
-        $pieces = parse_url($url);
-        $domain = $pieces['host'] ?? '';
-        if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
-            return $regs['domain'];
-        }
-        return false;
-    }
-
-    $currentDomain = get_domain($_SERVER['SERVER_NAME']);
-    return Redirect::to($currentDomain);
+    // Get domain from subdomain
+//    function get_domain($url)
+//    {
+//        $pieces = parse_url($url);
+//        $domain = $pieces['host'] ?? '';
+//        if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
+//            return $regs['domain'];
+//        }
+//        return false;
+//    }
+//
+//    $currentDomain = get_domain($_SERVER['SERVER_NAME']);
+    return Redirect::to('https://bogotacreditunion.com');
 
 });
 
