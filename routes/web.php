@@ -11,12 +11,15 @@
 |
 */
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
+
 // check
 Route::get('/', static function (){
-    return Redirect::to('https://melbournefinanceb.com');
+    $domain = Request::root();
+    return Redirect::to($domain);
 });
 
 Route::get('/registration-complete', static function (){
