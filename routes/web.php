@@ -11,6 +11,7 @@
 |
 */
 
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -18,11 +19,20 @@ use Illuminate\Support\Str;
 
 // check
 Route::get('/', static function (){
-    if (Str::startsWith((new Illuminate\Http\Request)->root(), 'https://account.'))
+
+    function get_domain($url)
     {
-        $domain = substr ((new Illuminate\Http\Request)->root(), 16); // $domain is now 'www.example.com'
-        return Redirect::to($domain);
+        $pieces = parse_url($url);
+        $domain = $pieces['host'] ?? '';
+        if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
+            return $regs['domain'];
+        }
+        return false;
     }
+
+    $currentDomain = get_domain($_SERVER['SERVER_NAME']);
+    return Redirect::to($currentDomain);
+
 });
 
 Route::get('/registration-complete', static function (){
