@@ -143,7 +143,7 @@
                             <div class="form-group">
                                 <label class="text-light">Account Type</label>
                                 <select class="form-control @error('acctype') is-invalid @enderror" name="acctype" required>
-                                    <option>Select Account Type</option>
+                                    <option value="">Select Account Type</option>
                                     <option value="Savings Account">Savings Account</option>
                                     <option value="Fixed Deposit Account">Fixed Deposit Account</option>
                                     <option value="Current Account">Current Account</option>
