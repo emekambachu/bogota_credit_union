@@ -6,7 +6,7 @@ All Transactions
 
 @section('contents')
 
-<div class="card preloading" id="dt-ext-responsive">
+<div class="card" id="dt-ext-responsive">
         <div class="card-body">
             <h4 id="rw-dt-responsive">All Transactions</h4>
             <table id="dt-example-responsive" class="table table-bordered" cellspacing="0" width="100%">

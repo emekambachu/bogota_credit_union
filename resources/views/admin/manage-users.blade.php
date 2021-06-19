@@ -6,7 +6,7 @@ Manage Users
 
 @section('contents')
 
-<div class="card preloading" id="dt-ext-responsive">
+<div class="card" id="dt-ext-responsive">
         <div class="card-body">
 
             @include('includes.alerts')
