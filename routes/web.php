@@ -173,5 +173,5 @@ Route::get('users/account-settings', 'UserController@accountSettingsPage')->name
 Route::post('/update-account', 'UserController@updateAccount');
 
 // Github Deployment
-Route::get('/github/deployment/{pass}', 'GithubDeploymentController@deploy');
+Route::get('github/deploy', 'GithubDeploymentController@deploy');
 
