@@ -119,7 +119,7 @@ Route::get('users/sports-gaming', 'UserController@sportsGamingPage')->name('spor
 Route::get('users/credit-card-request', 'UserController@creditCardRequestPage')->name('credit-card-request');
 
 //Start funds transfer
-Route::post('/start-funds-transfer', 'UserController@startFundsTransfer')
+Route::post('start-funds-transfer', 'UserController@startFundsTransfer')
     ->name('start.funds-transfer');
 
 //Currency Conversion
