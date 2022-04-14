@@ -1,3 +1,3 @@
 <?php
-header('Location: https://account.bogotacreditunion.com/register');
+header('Location: https://bogotacreditunion.com/account/public/register');
 die();

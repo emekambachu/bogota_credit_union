@@ -13,7 +13,7 @@ Funds Transfer
 
         @include('includes.alerts')
 
-        <form method="post" action="/start-funds-transfer">
+        <form method="post" action="{{ url('/start-funds-transfer') }}">
             @csrf
             <div id="transfer_method" class="form-group">
                 <label>Select Transfer Method *</label>

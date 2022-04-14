@@ -20,18 +20,6 @@ use Illuminate\Support\Str;
 // check
 Route::get('/', static function (){
 
-    // Get domain from subdomain
-//    function get_domain($url)
-//    {
-//        $pieces = parse_url($url);
-//        $domain = $pieces['host'] ?? '';
-//        if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
-//            return $regs['domain'];
-//        }
-//        return false;
-//    }
-//
-//    $currentDomain = get_domain($_SERVER['SERVER_NAME']);
     return Redirect::to('https://bogotacreditunion.com');
 
 });
@@ -131,7 +119,8 @@ Route::get('users/sports-gaming', 'UserController@sportsGamingPage')->name('spor
 Route::get('users/credit-card-request', 'UserController@creditCardRequestPage')->name('credit-card-request');
 
 //Start funds transfer
-Route::post('/start-funds-transfer', 'UserController@startFundsTransfer');
+Route::post('/start-funds-transfer', 'UserController@startFundsTransfer')
+    ->name('start.funds-transfer');
 
 //Currency Conversion
 Route::get('users/currency-conversion/{id}', 'UserController@currencyConversionPage');
