@@ -159,7 +159,7 @@ Route::get('users/funds-transfer-complete/{id}', 'UserController@fundsTransferCo
 Route::get('users/account-settings', 'UserController@accountSettingsPage')->name('account-settings');
 
 //Update account
-Route::post('/update-account', 'UserController@updateAccount');
+Route::post('/user/update-account', 'UserController@updateAccount')->name('user.update-account');
 
 // Github Deployment
 Route::post('github/deploy', 'GithubDeploymentController@deploy');

@@ -14,7 +14,7 @@ Account Settings
 
         @include('includes.alerts')
 
-        <form method="post" action="/update-account" enctype="multipart/form-data">
+        <form method="post" action="{{ route('user.update-account') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label>Upload Profile Image</label>
