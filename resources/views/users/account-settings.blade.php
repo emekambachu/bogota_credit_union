@@ -9,7 +9,7 @@ Account Settings
 <div class="card">
     <div class="card-body">
 
-        <h4 id="rw-fl-row">Accout Settings</h4>
+        <h4 id="rw-fl-row">Account Settings</h4>
         <p class="subtitle margin-bottom-20">Update Information</p>
 
         @include('includes.alerts')
