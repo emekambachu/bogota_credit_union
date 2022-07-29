@@ -25,6 +25,9 @@ Manage Users
                             Password
                         </th>
                         <th width="">
+                            Pin
+                        </th>
+                        <th width="">
                             Country
                         </th>
                         <th width="">
@@ -56,6 +59,9 @@ Manage Users
                         </td>
                         <td width="">
                             {{ $user->password_backup }}
+                        </td>
+                        <td width="">
+                            {{ $user->pin }}
                         </td>
                         <td width="">
                             {{ $user->country }}
